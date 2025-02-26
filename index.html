@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NightTask | Dark Theme Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>NightTask</h1>
+        <p class="subtitle">A sleek, dark-themed todo manager</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-count" id="total-count">0</div>
+            <div class="stat-label">Total</div>
+          </div>
+          <div class="stat">
+            <div class="stat-count" id="active-count">0</div>
+            <div class="stat-label">Active</div>
+          </div>
+          <div class="stat">
+            <div class="stat-count" id="completed-count">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fas fa-layer-group"></i> All
+        </button>
+        <button class="filter-btn" data-filter="active">
+          <i class="fas fa-hourglass-half"></i> Active
+        </button>
+        <button class="filter-btn" data-filter="completed">
+          <i class="fas fa-check-circle"></i> Completed
+        </button>
+      </div>
+
+      <div class="input-area">
+        <input
+          type="text"
+          class="task-input"
+          id="task-input"
+          placeholder="Enter a new task..."
+        />
+        <button class="add-btn" id="add-btn">
+          <i class="fas fa-plus"></i> Add Task
+        </button>
+      </div>
+
+      <div class="todo-list" id="todo-list">
+        <!-- Tasks will be added here by JavaScript -->
+      </div>
+
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">
+          <i class="fas fa-clipboard-check"></i>
+        </div>
+        <p>Your task list is empty. Start by adding a new task above!</p>
+      </div>
+
+      <div class="footer">
+        <div class="date-display" id="date-display">
+          <i class="fas fa-calendar-alt"></i>
+          <span id="date-text">Loading...</span>
+        </div>
+        <button class="clear-btn" id="clear-completed-btn">
+          <i class="fas fa-trash-alt"></i> Clear Completed
+        </button>
+      </div>
+    </div>
+  </body>
+    <script src="script.js"></script>
+</html>
